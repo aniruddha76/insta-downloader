@@ -1,0 +1,22 @@
+{
+    "name" : "Instgram Bulk Downloader",
+    "version" : "0.1",
+    "manifest_version" : 3,
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_icon" : "logo.png"
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["script.js"]
+        }
+      ],
+    
+    "icons" : {
+        "128" : "logo.png"
+    },
+
+    "permissions" : ["activeTab"]
+}
