@@ -1,0 +1,27 @@
+body{
+  background-color: #FBF0B2;
+}
+
+.title{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 350px;
+    color: #000000;
+  }
+
+.note{
+  color: red;
+}
+
+img{
+  width: 100%;
+}
+.title{
+  font-size: 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin: 10px;
+}

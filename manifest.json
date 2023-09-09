@@ -1,22 +1,31 @@
 {
-    "name" : "Instgram Bulk Downloader",
+    "name" : "Insta Downloader",
     "version" : "0.1",
+    "description": "A Free Instagram Posts Bulk Downloader (Beta) By Aniruddha Thakur",
     "manifest_version" : 3,
     "action" : {
         "default_popup" : "popup.html",
         "default_icon" : "logo.png"
     },
 
+    "web_accessible_resources": [{
+      "matches": ["*://www.instagram.com/*"],
+      "resources": ["jszip.min.js"]
+    }],
+
     "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["script.js"]
-        }
-      ],
+      {
+        "matches": ["*://www.instagram.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
     
     "icons" : {
         "128" : "logo.png"
     },
 
-    "permissions" : ["activeTab"]
+    "host_permissions": [
+      "https://instagram.com/*"
+  ]
 }
