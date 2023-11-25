@@ -1,4 +1,4 @@
-(async () => {
+function startExtension() {(async () => {
     const src = chrome.runtime.getURL("./jszip.min.js");
     const jszip = await import(src);
     console.log({jszip});
@@ -139,3 +139,13 @@ images.forEach(function (image) {
         event.stopPropagation();
     });
 });
+}
+
+let headName = document.querySelectorAll("h1")[1];
+if(headName){
+    startExtension();
+} else{
+    setTimeout(function(){
+        startExtension();
+    }, 10000)
+}
