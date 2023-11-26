@@ -1,10 +1,12 @@
-function startExtension() {(async () => {
+(async () => {
     const src = chrome.runtime.getURL("./jszip.min.js");
     const jszip = await import(src);
     console.log({jszip});
   })();
 
-async function downloadSelectedImages() {
+function startExtension() {
+    
+    async function downloadSelectedImages() {
     const selectedImages = document.querySelectorAll('input[type="checkbox"]:checked');
     const imageUrls = Array.from(selectedImages).map(checkbox => {
         return checkbox.parentNode.parentElement.querySelector("img").src;
@@ -141,11 +143,19 @@ images.forEach(function (image) {
 });
 }
 
-let headName = document.querySelectorAll("h1")[1];
-if(headName){
+const mutationStatus = new MutationObserver(enteries => {
     startExtension();
-} else{
-    setTimeout(function(){
-        startExtension();
-    }, 10000)
-}
+    mutationStatus.disconnect();
+})
+
+mutationStatus.observe(document.body, {childList: true})
+
+// let headName = document.querySelectorAll("h1")[1];
+// let intervalId;
+
+// if(headName){
+//     startExtension();
+//     clearInterval(intervalId);
+// } else{
+//     intervalId = setInterval(startExtension, 1000)
+// }
