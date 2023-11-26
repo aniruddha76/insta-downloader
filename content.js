@@ -149,13 +149,3 @@ const mutationStatus = new MutationObserver(enteries => {
 })
 
 mutationStatus.observe(document.body, {childList: true})
-
-// let headName = document.querySelectorAll("h1")[1];
-// let intervalId;
-
-// if(headName){
-//     startExtension();
-//     clearInterval(intervalId);
-// } else{
-//     intervalId = setInterval(startExtension, 1000)
-// }
