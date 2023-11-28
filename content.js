@@ -80,9 +80,15 @@ function startExtension() {
     button.title = 'Download';
     button.value = 'button';
 
-    button.style.height = '40px';
+    button.style.height = '32px';
     button.style.width = 'auto';
     button.style.cursor = 'pointer';
+    button.style.backgroundColor = '#363636';
+    button.style.border = 'none';
+    button.style.borderRadius = '8px';
+    button.style.fontSize = '14px';
+    button.style.fontWeight = '600';
+    button.style.padding = "7px 16px";
 
     var button2 = document.createElement('button');
     button2.type = 'button';
@@ -91,9 +97,15 @@ function startExtension() {
     button2.title = 'Download';
     button2.value = 'button';
 
-    button2.style.height = '40px';
+    button2.style.height = '32px';
     button2.style.width = 'auto';
     button2.style.marginInline = '10px';
+    button2.style.backgroundColor = '#363636';
+    button2.style.border = 'none';
+    button2.style.borderRadius = '8px';
+    button.style.fontSize = '14px';
+    button2.style.fontWeight = '600';
+    button2.style.padding = "7px 16px";
 
     var breakLine = document.createElement('br');
     var breakLine2 = document.createElement('br');
@@ -144,6 +156,7 @@ function startExtension() {
             checkboxContainer.style.zIndex = "2";
 
             var checkbox = document.createElement("input");
+            checkbox.id = "imageCheckbox";
             checkbox.type = "checkbox";
             checkbox.style.height = "20px";
             checkbox.style.width = "20px";
@@ -174,6 +187,11 @@ function startExtension() {
 
     let article = document.querySelectorAll("article")[0];
     mutationsInArtical.observe(article, { childList: true, subtree: true });
+}
+
+let headerFound = document.querySelector("h1");
+if(headerFound){
+    startExtension();
 }
 
 const mutationStatus = new MutationObserver(enteries => {
