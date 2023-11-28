@@ -150,6 +150,7 @@ function startExtension() {
         var images = document.querySelectorAll("article img");
         images.forEach(function (image) {
             var checkboxContainer = document.createElement("div");
+            checkboxContainer.id = "checkboxContainer";
             checkboxContainer.style.position = "absolute";
             checkboxContainer.style.top = "0";
             checkboxContainer.style.left = "0";
