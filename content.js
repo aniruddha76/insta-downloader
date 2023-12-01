@@ -168,9 +168,7 @@ function startExtension() {
                 event.stopPropagation();
                 let imageUrlToPush = checkbox.parentNode.parentElement.querySelector("img").src;
                 if (imageUrlToPush) {
-                    console.log(imageUrlToPush);
                     imageUrls.push(imageUrlToPush);
-                    console.log("Added that into download list!!")
                 }
             });
 
@@ -207,11 +205,9 @@ function startExtension() {
 
                     checkbox.addEventListener("click", function (event) {
                         event.stopPropagation();
-                        let imageUrlToPush = checkbox.parentNode.parentElement.querySelector("img").src;
+                        let imageUrlToPush = addedImages[j].parentElement.querySelector("img").src;
                         if (imageUrlToPush) {
-                            console.log(imageUrlToPush);
                             imageUrls.push(imageUrlToPush);
-                            console.log("Added that into download list!!")
                         }
                     });
 
