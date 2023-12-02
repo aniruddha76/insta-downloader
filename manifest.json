@@ -1,7 +1,7 @@
 {
     "name" : "Insta Downloader",
-    "version" : "0.3",
-    "description": "A Free Instagram Posts Bulk Downloader (Beta) By Aniruddha Thakur",
+    "version" : "1.0",
+    "description": "A Free Instagram Posts Bulk Downloader By Aniruddha Thakur",
     "manifest_version" : 3,
     "action" : {
         "default_popup" : "popup.html",
