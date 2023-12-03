@@ -13,7 +13,7 @@ Welcome to Insta Downloader, a powerful Chrome extension designed to simplify th
 
 ## Installation
 
-### Manual Installation
+### 1. Manual Installation
 
 1. Download the latest release's CRX file from the [Releases](https://github.com/aniruddha76/insta-downloader/releases) section.
 2. Open Chrome and navigate to `chrome://extensions/`.
@@ -21,7 +21,7 @@ Welcome to Insta Downloader, a powerful Chrome extension designed to simplify th
 4. Drag and drop the downloaded CRX file onto the Extensions page.
 5. Confirm the installation.
 
-### Chrome Web Store (Coming Soon)
+### 2. Chrome Web Store (Coming Soon)
 
 I'am working on getting Insta Downloader listed on the Chrome Web Store for an even more straightforward installation process. Stay tuned for updates!
 
