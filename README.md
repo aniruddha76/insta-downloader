@@ -1,4 +1,4 @@
-# Insta Downloader v1.0
+![insta-downloader-banner](https://github.com/aniruddha76/insta-downloader/assets/109715980/d3487fee-7173-4ba7-a95e-bea4daa49c30)
 
 ## Overview
 
